@@ -1,0 +1,116 @@
+.hero-section{
+    padding-top: 105px;
+    padding-bottom: 114px;
+}
+.hero__top{
+    @include display();
+}
+.hero__content{
+    max-width: 440px;
+}
+.hero__title{
+    max-width: 420px;
+    @include textStyle($color:#22343D,$fontSize:40px,$fontWeight:700,$lineHeight:60px);
+    margin-bottom: 18px;
+}
+.hero__text-wrapper{
+    max-width: 440px;
+    margin-bottom: 45px;
+}
+.hero__text{
+    @include textStyle($color:#22343D,$fontSize:18px,$fontWeight:400,$lineHeight:28px);
+}
+.hero__link-wrapper{
+    @include display($space:start);
+    gap: 30px;
+}
+.hero__link{
+    padding: 12px 0;
+    width: 175px;
+    height: 53px;
+    text-align: center;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #02897A;
+    transition: color 0.4s linear;
+    @include textStyle($color:#FFF, $fontSize:16px, $fontWeight:600);
+    &:hover{
+        background: #FFF;
+        border: 1px solid #BCD0E5;
+        @include textStyle($color:#173A56, $fontSize:16px, $fontWeight:700);
+    }
+    &:active{
+        opacity: 0.7;
+    }
+}
+.hero__link-inner{
+    @include display($space:start);
+    gap: 9px;
+}
+.hero__link-text{
+    transition: color 0.3s linear;
+    @include textStyle($color:#02897A, $fontSize:16px, $fontWeight:600);
+    text-decoration-line: underline;
+    &:hover{
+        @include textStyle($color:#173A56, $fontSize:16px, $fontWeight:600);
+    }
+    &:active{
+        opacity: 0.7;
+    }
+}
+.hero__img{
+    width: 600px;
+    height: 555px;
+}
+@media (max-width:1060px){
+    .hero__img{
+        width: 485px;
+        height: auto;
+    }
+    .hero__content{
+        margin-top: 104px;
+    }
+}
+@media (max-width:937px){
+    .hero__img{
+        width: 440px;
+        height: auto;
+        
+    }
+}
+@media (max-width:890px){
+    .hero__top{
+        @include display($direction:column-reverse)
+    }
+    .hero__content{
+        margin-top: 0;
+        max-width: 100%;
+    }
+    .hero__title{
+        max-width: 100%;
+    }
+    .hero__text-wrapper{
+        max-width: 100%;
+    }
+    .hero__img{
+        max-width: 440px;
+        height: auto;
+    }
+}
+@media (max-width:685px){
+    .hero__img{
+        max-width: 338px;
+    }
+    .hero__title{
+        @include textStyle($color:#22343D,$fontSize:36px,$fontWeight:700,$lineHeight:60px);
+    }
+    .hero__text{
+        @include textStyle($color:#22343D,$fontSize:18px,$fontWeight:400,$lineHeight:28px);
+    }
+    .hero__link-wrapper{
+        max-width: 100%;
+    }
+    .hero__link-inner{
+        max-width: 100%;
+    }
+}

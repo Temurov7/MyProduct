@@ -1,0 +1,107 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.footer__content{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.footer__websites{
+    display: flex;
+    gap: 16px;
+}
+.footer__wrap{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 27px;
+}
+.footer__wrap2{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 27px;
+}
+.footer__wrapper{
+    display: flex;
+    gap: 105px;
+}
+.footer__span{
+    @include textStyle($color:#22343D,$fontSize:16px, $fontWeight:400,$lineHeight:35px);
+    font-family: 'Poppins',sans-serif;
+    &:hover{
+    @include textStyle($color:#22343D,$fontSize:20px, $fontWeight:500,$lineHeight:30px);
+    }
+}
+.footer__span2{
+    @include textStyle($color:#22343D,$fontSize:16px, $fontWeight:400,$lineHeight:35px);
+    font-family: 'Poppins',sans-serif;
+    &:hover{
+    @include textStyle($color:#22343D,$fontSize:20px, $fontWeight:500,$lineHeight:30px);
+    }
+}
+.footer__card{
+    max-width: 325px;
+    height: 199px;
+}
+.footer__card-title{
+    max-width: 280px;
+    height: 57px;
+    @include textStyle($color:#22343D,$fontSize:20px, $fontWeight:500,$lineHeight:30px);
+    font-family: 'Poppins',sans-serif;
+    margin-bottom: 34px;
+}
+.form-email-card{
+    max-width: 325px;
+    height: 48px;
+    padding: 10px 0 10px 15px;
+    margin-bottom: 21px;
+    border-radius: 4px;
+    border: 1px solid #BCD0E5;
+    background: #FFF;   
+}
+.form-input{
+    width: 100%;
+    border: none;
+    @include textStyle($color:#BCD0E5,$fontSize:16px, $fontWeight:400,$lineHeight:28px);
+    font-family: 'Poppins',sans-serif;
+}
+.footer__button{
+    width: 131px;
+    height: 39px;
+    text-align: center;
+    flex-shrink: 0;
+    border-radius: 4px;
+    transition: color 0.4s linear;
+    border: 1px solid #BCD0E5;
+    background: #02897A;
+    @include textStyle($color:#FFF, $fontSize:16px, $fontWeight:700);
+    &:hover{
+       background: #FFF;
+    @include textStyle($color:#22343D, $fontSize:16px, $fontWeight:700);
+    }
+    &:active{
+        opacity: 0.7;
+    }
+}
+.footer__text-end{
+    text-align: center;
+    @include textStyle($color:#22343D,$fontSize:16px, $fontWeight:400,$lineHeight:30px);
+    font-family: 'Poppins',sans-serif;
+    margin-bottom: 46px;
+}
+
+@media (max-width:815px){
+    .footer{
+        @include display($direction:column)
+    }
+    .footer__wrapper{
+        text-align: center;
+        @include display($direction:column);
+        margin-top: 32px;
+        gap: 32px;
+    }
+    .footer__card{
+        text-align: center;
+    }
+}

@@ -1,0 +1,116 @@
+.site-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 19px 0 18px;
+    background: #FFF;
+}
+.header{
+    @include display()
+}
+.header__logo-link{
+    width: 178px;
+    @include display();
+    gap: 16px;
+    &:hover{
+        opacity: 0.7;
+    }
+}
+.header__logo-text{
+    @include textStyle()
+}
+.header__logo-cards{
+    @include display($items:center,$space:center);
+    gap: 24px;
+}
+.navbar__list{
+    @include display($space:start);
+    gap: 30px;
+}
+.navbar__link{
+    transition: color 0.4s linear;
+    @include textStyle($color:#22343D, $fontSize:18px, $fontWeight:400);
+    &:hover{
+    @include textStyle($color:#22343D, $fontSize:18px, $fontWeight:600);
+    }
+}
+.header__links{
+    @include display();
+    gap: 24px;
+}
+.header__link{
+    padding: 8px 0;
+    width: 102px;
+    height: 43px;
+    text-align: center;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #BCD0E5;
+    transition: color 0.4s linear;
+    @include textStyle($color:#173A56, $fontSize:16px, $fontWeight:600);
+    &:hover{
+       opacity: 0.7;
+    }
+    &:active{
+        opacity: 0.5;
+    }
+}
+.header__link-inner{
+    padding: 8px 0;
+    width: 102px;
+    text-align: center;
+    height: 43px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #BCD0E5;
+    background: #02897A;
+    transition: color 0.4s linear;
+    @include textStyle($color:#FFF, $fontSize:16px, $fontWeight:600);
+    &:hover{
+        border: 1px solid #BCD0E5;
+        border-radius: 4px;
+        opacity: 0.7;
+    }
+    &:active{
+        opacity: 0.5;
+    }
+}
+.hamburger-btn{
+    border: none;
+    width: 28px;
+    height: 31px;
+    background: transparent;
+    display: none;
+}
+@media (max-width:937px){
+    .navbar__list{
+        display: none;
+    }
+    .header__night-day{
+        display: block;
+    }
+}
+
+@media (max-width:890px){
+    .site-header{
+        padding: 18px 0 19px;
+    }
+    .navbar{
+        display: none;
+    }
+    .hamburger-btn{
+        display: block;
+    }
+    .header__link{
+        display: none;
+    }
+    .header__link-inner{
+        display: none;
+    }
+}
+@media (max-width:685px){
+    .site-header{
+        padding: 17px 0 16px;
+    }
+}

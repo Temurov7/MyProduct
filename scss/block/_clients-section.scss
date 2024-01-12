@@ -1,0 +1,81 @@
+.clients-section{
+    margin-bottom: 157px;
+}
+.clients__content{
+    @include display($direction:column,$items:center,$space:center)
+}
+.clients__title{
+    @include textStyle($color:#22343D,$fontSize:34px, $fontWeight:700, $lineHeight:57px);
+    font-family: 'Poppins',serif;
+    margin-bottom: 8px;
+}
+.clients__text-card{
+    max-width: 537px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.clients__text{
+    @include textStyle($color:#22343D,$fontSize:16px, $fontWeight:500, $lineHeight:28px);
+    font-family: 'Poppins',serif;
+}
+.clients__list{
+    @include display()
+}
+.clients__item{
+    position: relative;
+    padding: 28px 26px 23px;
+    max-width: 327px;
+    height: 236px;
+    border-radius: 5px;
+    border: 1px solid #DEDEDE;
+    background: var(--light-background, #FFF);
+}
+.clients__item::before{
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    width: 106px;
+    height: 18px;
+    background-image: url("../images/clients-item-img.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.clients__item-text{
+    margin-top: 32px;
+    margin-bottom: 16px;
+    @include textStyle($color:#737373,$fontSize:16px, $fontWeight:400, $lineHeight:28px);
+    font-family: 'Poppins',serif;
+}
+.clients__item-card{
+    display: flex;
+    gap: 14px;
+}
+.clients__item-wrap{
+    display: flex;
+    flex-direction: column;
+}
+.clients__item-title{
+    @include textStyle($color:#252B42,$fontSize:14px, $fontWeight:500, $lineHeight:24px);
+    font-family: 'Poppins',serif;
+    &:hover{
+    @include textStyle($color:#02897A,$fontSize:16px, $fontWeight:600);
+    }
+}
+.clients__item-span{
+    @include textStyle($color:#252B42,$fontSize:14px, $fontWeight:500, $lineHeight:24px);
+    font-family: 'Poppins',serif;
+    &:hover{
+    @include textStyle($color:#02897A,$fontSize:16px, $fontWeight:600);
+    }
+}
+
+@media (max-width:1010px){
+    .clients-section{
+        margin-bottom: 100px;
+    }
+    .clients__list{
+        @include display($direction:column);
+        gap: 32px;
+    }
+}

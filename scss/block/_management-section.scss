@@ -1,0 +1,67 @@
+.management-section{
+    margin-bottom: 150px;
+}
+.management{
+    @include display()
+}
+.management__content{
+   width: 486px;
+}
+.management__span{
+    @include textStyle($color:#22343D,$fontSize:16px, $fontWeight:600);
+    margin-bottom: 8px;
+}
+.management__title{
+    @include textStyle($color:#22343D,$fontSize:32px, $fontWeight:700);
+    margin-bottom: 131px;
+}
+.management__text{
+    @include textStyle($color:#22343D,$fontSize:16px, $fontWeight:400, $lineHeight:26px);
+    margin-bottom: 30px;
+}
+.management__span-two{
+    @include textStyle($color:#22343D,$fontSize:16px, $fontWeight:600, $lineHeight:26px);
+    margin-bottom: 12px;
+}
+.management__text-two{
+    @include textStyle($color:#22343D,$fontSize:16px, $fontWeight:400, $lineHeight:26px);
+    margin-bottom: 25px;
+}
+.management__span-three{
+    @include textStyle($color:#22343D,$fontSize:16px, $fontWeight:600, $lineHeight:26px);
+    margin-bottom: 12px;
+}
+.management__text-three{
+    @include textStyle($color:#22343D,$fontSize:16px, $fontWeight:400, $lineHeight:26px);
+    margin-bottom: 19px;
+}
+.management__img{
+    width: 539px;
+    height: 473px;
+}
+
+@media (max-width:890px){
+    .management-section{
+        margin-top: 0;
+        margin-bottom: 78px;
+    }
+    .management{
+        @include display($direction:column-reverse)
+    }
+    .management__content{
+        width: 100%;
+    }
+    .management__title{
+        margin-bottom: 16px;
+    }
+    .management__img{
+        width: 350px;
+        height: 306px;
+        margin-bottom: 50px;
+    }
+}
+@media (max-width:685px){
+    .management-section{
+        margin-top: 0;
+    }
+}
